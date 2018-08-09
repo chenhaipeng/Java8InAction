@@ -2,7 +2,11 @@ package lambdasinaction.chap14;
 
 import java.util.function.DoubleUnaryOperator;
 
-
+/**
+ * 科里化
+ * 科里化1是一种将具备2个参数(比如，x和y)的函数f转化为使用一个参数的函数g，并 且这个函数的返回值也是一个函数，它会作为新函数的一个参数。
+ * 后者的返回值和初始函数的 返回值相同，即f(x,y) = (g(x))(y)。
+ */
 public class Currying {
 
     public static void main(String[] args) {

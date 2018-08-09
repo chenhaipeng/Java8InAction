@@ -37,4 +37,12 @@ public class Stock {
     public void setMarket( String market ) {
         this.market = market;
     }
+
+    @Override
+    public String toString() {
+        return "Stock{" +
+            "symbol='" + symbol + '\'' +
+            ", market='" + market + '\'' +
+            '}';
+    }
 }

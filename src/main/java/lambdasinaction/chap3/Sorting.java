@@ -40,7 +40,8 @@ public class Sorting {
         // 4
         // [Apple{color='red', weight=10}, Apple{color='red', weight=20}, Apple{color='green', weight=155}]
         inventory.sort(comparing(Apple::getWeight));
-        System.out.println(inventory);       
+
+        System.out.println(inventory);
     }
 
     public static class Apple {

@@ -25,6 +25,9 @@ public class Summarizing {
     }
 
     private static Dish findMostCaloricDish() {
+
+        //menu.stream().mapToInt(Dish::getCalories).max();
+        
         return menu.stream().collect(reducing((d1, d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2)).get();
     }
 
@@ -50,6 +53,9 @@ public class Summarizing {
         return menu.stream().map(Dish::getName).collect(joining());
     }
 
+    /**
+     * good job 这个是我们平时用得比较多的
+     */
     private static String getShortMenuCommaSeparated() {
         return menu.stream().map(Dish::getName).collect(joining(", "));
     }

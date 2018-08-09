@@ -73,6 +73,11 @@ public class Main {
                            );
     }
 
+    /**
+     * Consumer<xx> 代表可以接受xx类，如果xx类是一个builder ，那么你就可以链式构造
+     * 如：Consumer<TradeBuilder> consumer，注意consumer.accept( builder )
+     * 代表执行builder方式 ，如果不写代表没有用到
+     */
     public void lambda() {
         Order order = LambdaOrderBuilder.order( o -> {
             o.forCustomer( "BigBank" );

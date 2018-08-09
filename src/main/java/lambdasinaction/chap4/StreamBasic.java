@@ -1,12 +1,9 @@
 package lambdasinaction.chap4;
 
 import java.util.*;
-import java.util.stream.*;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
-
-import static lambdasinaction.chap4.Dish.menu;
 
 public class StreamBasic {
 
@@ -41,10 +38,15 @@ public class StreamBasic {
     }
 
     public static List<String> getLowCaloricDishesNamesInJava8(List<Dish> dishes){
-        return dishes.stream()
+        return dishes.parallelStream()
                 .filter(d -> d.getCalories() < 400)
                 .sorted(comparing(Dish::getCalories))
                 .map(Dish::getName)
                 .collect(toList());
+    }
+
+    //todo
+    public static Map<String,List<String>> getKeyMapInJava8(List<Dish> dishes){
+        return null;
     }
 }

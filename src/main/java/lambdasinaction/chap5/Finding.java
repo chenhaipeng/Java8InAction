@@ -1,8 +1,7 @@
 package lambdasinaction.chap5;
-import lambdasinaction.chap4.*;
+import lambdasinaction.chap4.Dish;
 
-import java.util.stream.*;
-import java.util.*;
+import java.util.Optional;
 
 import static lambdasinaction.chap4.Dish.menu;
 

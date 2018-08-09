@@ -26,11 +26,14 @@ public class BuildingStreams {
               .limit(10)
               .forEach(System.out::println);
 
+        System.out.println("=======================");
+
         // fibonnaci with iterate
         Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1],t[0] + t[1]})
               .limit(10)
               .forEach(t -> System.out.println("(" + t[0] + ", " + t[1] + ")"));
-        
+
+        System.out.println("=======================");
         Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1],t[0] + t[1]})
               .limit(10)
               . map(t -> t[0])  
@@ -52,7 +55,8 @@ public class BuildingStreams {
             }
         }).limit(5)
           .forEach(System.out::println);
-   
+
+        System.out.println("----------------------");
 
         IntSupplier fib = new IntSupplier(){
                   private int previous = 0;
@@ -66,7 +70,7 @@ public class BuildingStreams {
               };
          IntStream.generate(fib).limit(10).forEach(System.out::println);
 
-         long uniqueWords = Files.lines(Paths.get("lambdasinaction/chap5/data.txt"), Charset.defaultCharset())
+         long uniqueWords = Files.lines(Paths.get("/Users/uc/IdeaProjects/Java8InAction/src/main/resources/lambdasinaction/chap5/data.txt"), Charset.defaultCharset())
                                  .flatMap(line -> Arrays.stream(line.split(" ")))
                                  .distinct()
                                  .count();

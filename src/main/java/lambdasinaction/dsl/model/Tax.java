@@ -28,4 +28,8 @@ public class Tax {
     public static double surcharge(double value) {
         return value * 1.05;
     }
+
+    public static double test(double value) {
+        return value + 100;
+    }
 }

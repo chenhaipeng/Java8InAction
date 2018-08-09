@@ -63,4 +63,14 @@ public class Trade {
     public double getValue() {
         return quantity * price;
     }
+
+    @Override
+    public String toString() {
+        return "Trade{" +
+            "type=" + type +
+            ", stock=" + stock +
+            ", quantity=" + quantity +
+            ", price=" + price +
+            '}';
+    }
 }

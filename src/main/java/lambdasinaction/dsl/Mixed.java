@@ -23,7 +23,15 @@ import static lambdasinaction.dsl.MixedBuilder.sell;
 import static lambdasinaction.dsl.MixedBuilder.forCustomer;
 
 public class Mixed {
-    public void mixed() {
+    public static void main(String[] args) {
+        mixed();
+    }
+
+    /**
+     * Consumer<TradeBuilder> consumer 接受一个TradeBuilder,TradeBuilder构建一个表达式
+     * Consumer.accept 相当 于执行表达式链
+     */
+    public static void mixed() {
         Order order =
                 forCustomer( "BigBank",
                              buy( t -> t.quantity( 80 )
@@ -34,6 +42,7 @@ public class Mixed {
                                          .stock( "GOOGLE" )
                                          .on( "NASDAQ" )
                                          .at( 125.00 )) );
+        System.out.println(order);
 
     }
 }

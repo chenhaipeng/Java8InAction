@@ -22,6 +22,9 @@ import lambdasinaction.dsl.model.Trade;
 
 import java.util.stream.Stream;
 
+/**
+ * 这个类跟lambda好象没有什么关系啊，只有一个Stream.of(trades).forEach(order::addTrade)
+ */
 public class NestedFunctionOrderBuilder {
 
     public static Order order(String customer, Trade... trades) {

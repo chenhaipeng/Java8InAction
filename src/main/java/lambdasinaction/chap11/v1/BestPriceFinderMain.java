@@ -16,6 +16,11 @@ public class BestPriceFinderMain {
         execute("combined USD CompletableFuture v3", () -> bestPriceFinder.findPricesInUSD3("myPhone27S"));
     }
 
+    /**
+     * todo :这个几乎是最低成本获取并行的方式了，要好好注意学习并运用
+     * @param msg
+     * @param s
+     */
     private static void execute(String msg, Supplier<List<String>> s) {
         long start = System.nanoTime();
         System.out.println(s.get());
